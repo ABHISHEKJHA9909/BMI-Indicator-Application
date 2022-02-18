@@ -17,7 +17,7 @@ void print_box(char a,char b,char c,char i,char j,char k,char x,char y,char z){
 	cout<<"+---+---+---+"<<endl;
 }
 
-/*this fucntion will take user input for position they want to mark and 
+/*this fucntion will take user input for position they want to mark and
  * check if the position is previouly occuppied*/
 void input(vector<char> &attemped_positions,char &player_input,int player_no){
 		while(true){
@@ -63,10 +63,10 @@ void play(){
 	char a='1',b='2',c='3',i='4',j='5',k='6',x='7',y='8',z='9';			//variables for each position so that we can change it when user enter a positon
 	print_box(a,b,c,i,j,k,x,y,z);										//This is very first time when our grid is shown
 	cout<<endl<<endl;
-	
+
 	char player1_input,player2_input;									//variable to take user input to select the position they want to mark
 	vector<char>attemped_positions={};
-	
+
 	while(true){
 		if((a==b&&b==c)||(i==j&&j==k)||(x==y&&y==z)||(a==i&&i==x)||(b==j&&j==y)||(c==k&&k==z)||(a==j&&j==z)||(c==j&&j==x)){
 			cout<<"player 2 win";
@@ -74,10 +74,9 @@ void play(){
 		}
 		input(attemped_positions,player1_input,1);
 		variable_maping(player1_input,'X',a,b,c,i,j,k,x,y,z);
-		
-		
+
+
 		if((a==b&&b==c)||(i==j&&j==k)||(x==y&&y==z)||(a==i&&i==x)||(b==j&&j==y)||(c==k&&k==z)||(a==j&&j==z)||(c==j&&j==x)){
-			cout
 			cout<<"Player 1 win";
 			break;
 		}
